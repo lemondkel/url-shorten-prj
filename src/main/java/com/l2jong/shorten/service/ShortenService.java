@@ -8,8 +8,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import static com.sun.org.apache.xml.internal.security.keys.keyresolver.KeyResolver.iterator;
-
 @Service
 public class ShortenService {
 
