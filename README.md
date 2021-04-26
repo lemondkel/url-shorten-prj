@@ -1,2 +1,2 @@
-# url-shorten-prj
-SpringBoot URL Shorten Project
+# URL Shorten Project (SpringBoot)
+Init
