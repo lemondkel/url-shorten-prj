@@ -14,22 +14,13 @@ import java.io.IOException;
 @RestController
 @EnableAutoConfiguration
 public class HomeController {
-
-	public final static String HTTP_PREFIX = "http://";
-	public final static String HTTPS_PREFIX = "http://";
-
 	@Autowired
 	private ShortenService shortenService;
 
 	@RequestMapping("/{shorturl}")
-	public ModelAndView home(HttpServletResponse response,
-							 @PathVariable("shorturl") String shorturl) throws IOException {
+	public ModelAndView home(@PathVariable("shorturl") String shorturl) throws IOException {
 		String url = shortenService.getUrl(shorturl);
-		if (url.indexOf(HTTP_PREFIX) != 0 || url.indexOf(HTTPS_PREFIX) != 0) {
-			url = HTTP_PREFIX.concat(url);
-		}
-		response.sendRedirect(url);
-		return null;
+		return new ModelAndView("redirect:" + url);
 	}
 
 }
