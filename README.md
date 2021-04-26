@@ -1,5 +1,5 @@
 # URL Shorten Project (SpringBoot)
-Init
+데이터베이스를 사용하지 않고, WAS에 Map형식으로 저장하는 단축URL 생성용 웹서비스입니다.
 
 ## Environment
 + Java
